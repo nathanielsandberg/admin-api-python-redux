@@ -1,0 +1,265 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "required": [
+        "organizationInfo",
+        "appInfo",
+        "entityInfo",
+        "solutionInfo",
+        "userInfo",
+        "apiInfo",
+        "subscriptionId",
+        "connectionId"
+    ],
+    "properties": {
+        "organizationInfo": {
+            "type": "object",
+            "title": "The organizationInfo schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "required": [
+                "id",
+                "name",
+                "address",
+                "countryCode",
+                "phoneNumber"
+            ],
+            "properties": {
+                "id": {
+                    "title": "The id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "name": {
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "address": {
+                    "type": "string",
+                    "title": "The address schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "countryCode": {
+                    "type": "string",
+                    "title": "The countryCode schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "phoneNumber": {
+                    "type": "string",
+                    "title": "The phoneNumber schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                }
+            },
+            "additionalProperties": true
+        },
+        "appInfo": {
+            "type": "object",
+            "title": "The appInfo schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "required": [
+                "id",
+                "name",
+                "developer",
+                "contactEmail",
+                "appOrgId"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "The id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "name": {
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "developer": {
+                    "type": "string",
+                    "title": "The developer schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "contactEmail": {
+                    "type": "string",
+                    "title": "The contactEmail schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "appOrgId": {
+                    "type": "string",
+                    "title": "The appOrgId schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                }
+            },
+            "additionalProperties": true
+        },
+        "entityInfo": {
+            "type": "object",
+            "title": "The entityInfo schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "required": [
+                "id",
+                "name",
+                "address",
+                "countryCode",
+                "phoneNumber"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "The id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "name": {
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "address": {
+                    "type": "string",
+                    "title": "The address schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "countryCode": {
+                    "type": "string",
+                    "title": "The countryCode schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "phoneNumber": {
+                    "type": "string",
+                    "title": "The phoneNumber schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                }
+            },
+            "additionalProperties": true
+        },
+        "solutionInfo": {
+            "type": "object",
+            "title": "The solutionInfo schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "required": [
+                "id",
+                "name",
+                "developer",
+                "contactEmail",
+                "appOrgId"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "The id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "name": {
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "developer": {
+                    "type": "string",
+                    "title": "The developer schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "contactEmail": {
+                    "type": "string",
+                    "title": "The contactEmail schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "appOrgId": {
+                    "type": "string",
+                    "title": "The appOrgId schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                }
+            },
+            "additionalProperties": true
+        },
+        "userInfo": {
+            "type": "object",
+            "title": "The userInfo schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "required": [
+                "fortellisId"
+            ],
+            "properties": {
+                "fortellisId": {
+                    "type": "string",
+                    "title": "The fortellisId schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                }
+            },
+            "additionalProperties": true
+        },
+        "apiInfo": {
+            "type": "object",
+            "title": "The apiInfo schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "required": [
+                "id",
+                "name",
+                "implementationName"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "title": "The id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "name": {
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                },
+                "implementationName": {
+                    "type": "string",
+                    "title": "The implementationName schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                }
+            },
+            "additionalProperties": true
+        },
+        "subscriptionId": {
+            "type": "string",
+            "title": "The subscriptionId schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+        },
+        "connectionId": {
+            "type": "string",
+            "title": "The connectionId schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+        }
+    },
+    "additionalProperties": true
+}
