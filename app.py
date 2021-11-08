@@ -61,6 +61,42 @@ class Activate(Resource):
 
 api.add_resource(Activate, '/activate')
 
+class Deactivate(Resource):
+    def post(self, connectionId):
+        app.logger.debug('Headers: %s', request.headers)
+        app.logger.debug('Body: %s', request.get_data())
+        
+        token = request.headers['Authorization'][len(PREFIX):]
+
+        url = "https://identity-dev.fortellis.io/oauth2/aus1ni5i9n9WkzcYa2p7/v1/keys"
+
+        jwks_client = PyJWKClient(url)
+
+        signing_key = jwks_client.get_signing_key_from_jwt(token)
+
+        data = jwt.decode(
+            token,
+            signing_key.key,
+            algorithms=["RS256"],
+            audience="api_providers",
+            options={"verify_exp": True},
+        )
+
+        print(data)
+
+        entry = connectionId
+
+        with open('deactivationRequests.json', 'r+') as file:
+            file_data = json.load(file)
+            file_data['deactivationRequests'].append(entry)
+            file.seek(0)
+            json.dump(file_data, file, indent = 2)
+
+
+        return {"links":[{"href":"string","rel":"string","method":"string","title":"string"}]}
+
+api.add_resource(Deactivate, '/deactivate/<string:connectionId>')
+
 class Delete(Resource):
     def post(self):
         with open('connectionRequests.json', 'r+') as file:
@@ -90,6 +126,15 @@ class ConnectionRequests(Resource):
 
         return parsed
 api.add_resource(ConnectionRequests, '/connectionRequests')
+
+class DeactivationRequests(Resource):
+    def get(self):
+        with open('deactivationRequests.json', 'r+') as file:
+            parsed = json.load(file)
+
+        return parsed
+api.add_resource(DeactivationRequests, '/deactivationRequests')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
